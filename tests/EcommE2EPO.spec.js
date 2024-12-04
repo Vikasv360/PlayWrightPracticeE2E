@@ -1,8 +1,9 @@
 const { test, expect } = require('@playwright/test')
-
 const { PageObjectManager } = require('../PageObjects/PageObjectManager');
 
-test('Validate the End to end Functionality of Ecomm', async ({ page }) => {
+
+test.describe.configure({mode:'parallel'}) //if test file consist more than 1 test, then it run in parallel
+test('@Web Validate the End to end Functionality of Ecomm', async ({ page }) => {
 
     const username = "vikasbfc@testPlay.com";
     const password = "Test@123";
